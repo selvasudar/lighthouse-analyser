@@ -1,0 +1,258 @@
+[
+    {
+        "url": "https://piperocket.digital/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 62,
+        "accessibility": 83,
+        "bestPractices": 75,
+        "seo": 100,
+        "metrics": {
+            "fcp": "2.3 s",
+            "lcp": "9.1 s",
+            "tbt": "80 ms",
+            "cls": "0.172",
+            "speedIndex": "4.6 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/case-study/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 89,
+        "accessibility": 93,
+        "bestPractices": 75,
+        "seo": 100,
+        "metrics": {
+            "fcp": "2.4 s",
+            "lcp": "2.7 s",
+            "tbt": "40 ms",
+            "cls": "0.002",
+            "speedIndex": "5.6 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/about-us/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 92,
+        "accessibility": 79,
+        "bestPractices": 75,
+        "seo": 100,
+        "metrics": {
+            "fcp": "2.4 s",
+            "lcp": "2.4 s",
+            "tbt": "40 ms",
+            "cls": "0.002",
+            "speedIndex": "4.8 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/case-study-devrev/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 91,
+        "accessibility": 93,
+        "bestPractices": 75,
+        "seo": 100,
+        "metrics": {
+            "fcp": "2.5 s",
+            "lcp": "2.7 s",
+            "tbt": "40 ms",
+            "cls": "0",
+            "speedIndex": "4.3 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/case-study-cybersierra/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 91,
+        "accessibility": 93,
+        "bestPractices": 75,
+        "seo": 100,
+        "metrics": {
+            "fcp": "2.4 s",
+            "lcp": "2.7 s",
+            "tbt": "40 ms",
+            "cls": "0.007",
+            "speedIndex": "4.1 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/success-stories/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 91,
+        "accessibility": 93,
+        "bestPractices": 75,
+        "seo": 100,
+        "metrics": {
+            "fcp": "2.4 s",
+            "lcp": "2.6 s",
+            "tbt": "40 ms",
+            "cls": "0.002",
+            "speedIndex": "4.7 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/saas-seo/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 56.99999999999999,
+        "accessibility": 82,
+        "bestPractices": 71,
+        "seo": 100,
+        "metrics": {
+            "fcp": "2.3 s",
+            "lcp": "14.2 s",
+            "tbt": "100 ms",
+            "cls": "0.193",
+            "speedIndex": "6.2 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/saas-ppc/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 63,
+        "accessibility": 82,
+        "bestPractices": 71,
+        "seo": 100,
+        "metrics": {
+            "fcp": "2.3 s",
+            "lcp": "6.5 s",
+            "tbt": "50 ms",
+            "cls": "0.177",
+            "speedIndex": "4.7 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/case-study-storylane/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 91,
+        "accessibility": 93,
+        "bestPractices": 75,
+        "seo": 92,
+        "metrics": {
+            "fcp": "2.5 s",
+            "lcp": "2.8 s",
+            "tbt": "40 ms",
+            "cls": "0.044",
+            "speedIndex": "3.4 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/case-study-spendflo/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 91,
+        "accessibility": 93,
+        "bestPractices": 75,
+        "seo": 92,
+        "metrics": {
+            "fcp": "2.4 s",
+            "lcp": "2.7 s",
+            "tbt": "50 ms",
+            "cls": "0.005",
+            "speedIndex": "4.3 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/case-study-hyperverge/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 91,
+        "accessibility": 93,
+        "bestPractices": 75,
+        "seo": 92,
+        "metrics": {
+            "fcp": "2.3 s",
+            "lcp": "2.7 s",
+            "tbt": "40 ms",
+            "cls": "0.005",
+            "speedIndex": "4.4 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/case-study-hyperstart/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 89,
+        "accessibility": 93,
+        "bestPractices": 75,
+        "seo": 92,
+        "metrics": {
+            "fcp": "2.5 s",
+            "lcp": "2.9 s",
+            "tbt": "40 ms",
+            "cls": "0",
+            "speedIndex": "4.6 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/terms-and-conditions/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 91,
+        "accessibility": 98,
+        "bestPractices": 75,
+        "seo": 92,
+        "metrics": {
+            "fcp": "2.4 s",
+            "lcp": "2.7 s",
+            "tbt": "30 ms",
+            "cls": "0.039",
+            "speedIndex": "4.4 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/privacy-policy/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 94,
+        "accessibility": 98,
+        "bestPractices": 75,
+        "seo": 92,
+        "metrics": {
+            "fcp": "2.3 s",
+            "lcp": "2.3 s",
+            "tbt": "40 ms",
+            "cls": "0.004",
+            "speedIndex": "3.8 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/contact-us/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 91,
+        "accessibility": 80,
+        "bestPractices": 75,
+        "seo": 92,
+        "metrics": {
+            "fcp": "2.4 s",
+            "lcp": "2.4 s",
+            "tbt": "30 ms",
+            "cls": "0.005",
+            "speedIndex": "5.4 s"
+        }
+    },
+    {
+        "url": "https://piperocket.digital/manage-subscriptions/",
+        "timestamp": "2025-04-04T12:21:14.317Z",
+        "sitemapUrl": "https://piperocket.digital/page-sitemap.xml",
+        "performance": 82,
+        "accessibility": 93,
+        "bestPractices": 75,
+        "seo": 92,
+        "metrics": {
+            "fcp": "3.4 s",
+            "lcp": "3.4 s",
+            "tbt": "40 ms",
+            "cls": "0.01",
+            "speedIndex": "4.9 s"
+        }
+    }
+]
