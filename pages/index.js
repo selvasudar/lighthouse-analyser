@@ -8,6 +8,7 @@ export default function Home() {
   const [timestamps, setTimestamps] = useState([]);
   const [progress, setProgress] = useState(null);
   const [error, setError] = useState(null);
+  // const [darkMode, setDarkMode] = useState(false); // Dark mode state
 
   useEffect(() => {
     fetchTimestamps();
@@ -67,11 +68,25 @@ export default function Home() {
     }
   };
 
+  // const toggleDarkMode = () => {
+  //   setDarkMode(!darkMode);
+  //   document.documentElement.classList.toggle('dark');
+  // };
+
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto py-6 px-4">
-        <h1 className="text-3xl font-bold mb-6 dark:text-white">SiteBlaze</h1>
-        
+    // <div className={`min-h-screen ${darkMode ? 'dark bg-gray-900' : 'bg-gray-100'}`}>
+      <div className="min-h-screen">
+      <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-3xl font-bold dark:text-white">SiteBlaze</h1>
+          {/* <button
+            onClick={toggleDarkMode}
+            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+          >
+            {darkMode ? '☀️' : '🌙'}
+          </button> */}
+        </div>
+
         {error && (
           <div className="mb-4 p-4 bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-700 text-red-700 dark:text-red-200 rounded">
             {error} Contact: 
@@ -80,7 +95,7 @@ export default function Home() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="mb-6 flex gap-4">
+        <form onSubmit={handleSubmit} className="mb-6 flex flex-col sm:flex-row gap-4">
           <input
             type="text"
             value={sitemapUrl}
@@ -99,7 +114,7 @@ export default function Home() {
         </form>
 
         {progress && (
-          <div className="mb-6 p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
+          <div className="mb-6 p-4 bg-white dark:bg-gray-800 rounded-lg shadow w-full sm:w-3/4 md:w-1/2 mx-auto">
             <p className="dark:text-white">{progress.message}</p>
             <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mt-2">
               <div

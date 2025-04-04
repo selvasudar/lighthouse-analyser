@@ -4,7 +4,7 @@ module.exports = {
       "./pages/**/*.{js,ts,jsx,tsx}",
       "./components/**/*.{js,ts,jsx,tsx}",
     ],
-    darkMode: 'media', // or 'class' if you want to toggle manually
+    darkMode: 'class', // Changed to 'class' for manual toggle
     theme: {
       extend: {},
     },
