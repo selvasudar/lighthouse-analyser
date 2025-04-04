@@ -6,8 +6,8 @@ export default function Home() {
   const [sitemapUrl, setSitemapUrl] = useState('');
   const [results, setResults] = useState([]);
   const [timestamps, setTimestamps] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [selectedTimestamp, setSelectedTimestamp] = useState(null);
+  const [progress, setProgress] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetchTimestamps();
@@ -25,25 +25,43 @@ export default function Home() {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-    try {
-      const response = await axios.post('/api/analyze', { sitemapUrl });
-      await fetchTimestamps();
-      handleTimestampChange(response.data.timestamp);
-    } catch (error) {
-      console.error('Error:', error);
-      alert('Failed to analyze sitemap');
-    }
-    setLoading(false);
+    setProgress({ progress: 0, total: 0, current: 0, message: 'Starting...' });
+    setError(null);
+
+    const eventSource = new EventSource(`/api/analyze?sitemapUrl=${encodeURIComponent(sitemapUrl)}`);
+    
+    eventSource.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      if (data.error) {
+        setError(data.message);
+        setProgress(null);
+        eventSource.close();
+      } else if (data.progress === 100) {
+        setProgress(data);
+        setTimeout(() => {
+          setProgress(null);
+          fetchTimestamps();
+          handleTimestampChange(data.timestamp);
+        }, 1000);
+        eventSource.close();
+      } else {
+        setProgress(data);
+      }
+    };
+
+    eventSource.onerror = () => {
+      setError('Connection lost. Please contact administrator.');
+      setProgress(null);
+      eventSource.close();
+    };
   };
 
   const handleTimestampChange = async (timestamp) => {
     try {
       const response = await axios.get(`/api/results?timestamp=${timestamp}`);
       setResults(response.data);
-      setSelectedTimestamp(timestamp);
     } catch (error) {
       console.error('Error fetching results:', error);
     }
@@ -52,7 +70,16 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto py-6 px-4">
-        <h1 className="text-3xl font-bold mb-6 dark:text-white">Lighthouse Performance Analyzer</h1>
+        <h1 className="text-3xl font-bold mb-6 dark:text-white">SiteBlaze</h1>
+        
+        {error && (
+          <div className="mb-4 p-4 bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-700 text-red-700 dark:text-red-200 rounded">
+            {error} Contact: 
+            <a href="mailto:selvasudar3@gmail.com" className="underline"> selvasudar3@gmail.com</a> or 
+            <a href="https://linkedin.com/in/selvakumarduraipandian" target="_blank" className="underline"> LinkedIn</a>
+          </div>
+        )}
+
         <form onSubmit={handleSubmit} className="mb-6 flex gap-4">
           <input
             type="text"
@@ -60,15 +87,32 @@ export default function Home() {
             onChange={(e) => setSitemapUrl(e.target.value)}
             placeholder="Enter sitemap URL"
             className="flex-1 p-2 border rounded dark:bg-gray-800 dark:text-white dark:border-gray-700"
+            disabled={progress !== null}
           />
           <button
             type="submit"
-            disabled={loading}
+            disabled={progress !== null}
             className="px-4 py-2 bg-blue-500 text-white rounded disabled:bg-gray-400"
           >
-            {loading ? 'Analyzing...' : 'Analyze'}
+            Analyze
           </button>
         </form>
+
+        {progress && (
+          <div className="mb-6 p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
+            <p className="dark:text-white">{progress.message}</p>
+            <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mt-2">
+              <div
+                className="bg-blue-600 h-2.5 rounded-full"
+                style={{ width: `${progress.progress}%` }}
+              ></div>
+            </div>
+            <p className="text-sm mt-2 dark:text-white">
+              Progress: {progress.current}/{progress.total} ({Math.round(progress.progress)}%)
+            </p>
+          </div>
+        )}
+
         {results.length > 0 && (
           <Dashboard
             results={results}
