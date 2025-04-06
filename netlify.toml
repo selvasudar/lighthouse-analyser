@@ -1,6 +1,18 @@
 [build]
-  command = "next build"
-  publish = ".next"
+  command = "npm run build" # Adjust based on your build script
+  publish = ".next" # Adjust to your frontend output directory
+  functions = "functions" # Directory containing your Netlify Functions
+
+[dev]
+  command = "npm run dev" # Optional: for local dev with Netlify CLI
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+  
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["@sparticuz/chromium"]
+  [functions.analyze]
+    included_files = ["node_modules/@sparticuz/chromium/**/*"]
+    memory = 1024 # Increase memory (default is 1024MB)
+    timeout = 900 # Increase timeout to 15 minutes (max is 900 seconds)
